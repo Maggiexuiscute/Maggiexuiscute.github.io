@@ -115,9 +115,4 @@
       -moz-animation-fill-mode: forwards; 
 }       
 
-@media screen and (orientation: portrait) {
-	/* 竖屏样式 */
-}
-@media screen and (orientation: landscape) {
-	/* 横屏样式 */
-}
+
