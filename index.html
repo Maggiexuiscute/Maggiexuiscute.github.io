@@ -581,6 +581,14 @@
        			 alert(window.orientation);
 });
 		
+(function page_first() {
+	//设置font-size 1rem = 10vw
+	document.addEventListener('DOMContentLoaded', function() {
+		document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
+	}, false);
+}());
+
+		
 			var timer;
 			function dogallery(){
 				var boxes1 = document.getElementById("box");
