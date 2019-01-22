@@ -764,11 +764,35 @@
 		}
 		
 		var num=0;
-    function zan(){
+    	function zan(){
         num ++;
         //document.write(num);
         document.getElementById("zan").innerHTML=num;
-    }
+    	}
+		
+		function doChange(x){
+			if(x.id == "addimg"){
+				document.getElementById("add").style.color = "#804050";
+			}
+			else if(x.id == "qqimg"){
+				document.getElementById("qq").style.color = "#804050";
+			}
+			else if(x.id == "emailimg"){
+				document.getElementById("email").style.color = "#804050";
+			}
+		}
+		
+		function doBack(x){
+			if(x.id == "addimg"){
+				document.getElementById("add").style.color = "#00477D";
+			}
+			else if(x.id == "qqimg"){
+				document.getElementById("qq").style.color = "#00477D";
+			}
+			else if(x.id == "emailimg"){
+				document.getElementById("email").style.color = "#00477D";
+			}
+		}
 		</script>
 	
     <body>
@@ -787,7 +811,7 @@
 		</div>
 		
 		<div id="back">
-			<button id="btn" onclick="zan()" style="position: absolute;top: 80%;right: 5%;display:none">zan<img src="" alt=""></button><span id="zan" style="position: absolute;top: 80%;right: 8%"></span>
+			<button id="btn" onclick="zan()" style="position: absolute;top: 80%;right: 5%;display: none">zan<img src="" alt=""></button><span id="zan" style="position: absolute;top: 80%;right: 8%"></span>
 			
 			<div id="entrance" style="float: left;width: 10%;height: 15%;position: absolute;bottom: 20%;left: 8%;">
 				<img src="069bd5136cf7a25dcc3c4fde2fde6358.png" width="100%" height="100%" style="margin-top: 10;">
@@ -954,12 +978,12 @@
 				<h1 style="position: absolute;top:5%;left: 10%;font-family: sans-serif;font-size: 55px;color:#00477D;border: 1px solid #00477D">We're All Friends</h1>
 			</div>
 			<div id="info" style="width: 30%;height: 55%; position: absolute;top: 7%;left:50%;">
-				<h1 style="position: absolute;top:5%;left: 5%;font-family: sans-serif;font-size: 25px;color:#00477D;">6 Wuding Road, Chengdu, Sichuan, China 610031</h1>
-				<h1 style="position: absolute;top:35%;left: 5%;font-family: sans-serif;font-size: 25px;color:#00477D;">QQ:1234556</h1>
-				<h1 style="position: absolute;top:51%;left: 5%;font-family: sans-serif;font-size: 25px;color:#00477D;">Email:1234556@qq.com</h1>
-				<img src="IMG_2763.PNG" width="13%" height="20%" style="position: absolute; bottom:5%;left: 5%">
-				<img src="IMG_2764.PNG" width="13%" height="20%" style="position: absolute; bottom:5%;left: 35%">
-				<img src="IMG_2765.PNG" width="13%" height="20%" style="position: absolute; bottom:5%;left: 65%">
+				<h1 id="add" style="position: absolute;top:5%;left: 5%;font-family: sans-serif;font-size: 25px;color:#00477D;">6 Wuding Road, Chengdu, Sichuan, China 610031</h1>
+				<h1 id="qq" style="position: absolute;top:51%;left: 5%;font-family: sans-serif;font-size: 25px;color:#00477D;">QQ:1234556</h1>
+				<h1 id="email" style="position: absolute;top:35%;left: 5%;font-family: sans-serif;font-size: 25px;color:#00477D;">Email:1234556@qq.com</h1>
+				<img id="addimg" src="IMG_2763.PNG" width="13%" height="20%" style="position: absolute; bottom:5%;left: 5%" onmousemove ="doChange(this)" onmouseout="doBack(this)">
+				<img id="emailimg" src="IMG_2764.PNG" width="13%" height="20%" style="position: absolute; bottom:5%;left: 35%" onmousemove ="doChange(this)" onmouseout="doBack(this)">
+				<img id="qqimg" src="IMG_2765.PNG" width="13%" height="20%" style="position: absolute; bottom:5%;left: 65%" onmousemove ="doChange(this)" onmouseout="doBack(this)">
 			</div>
 		</div>
 		
