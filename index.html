@@ -571,6 +571,29 @@
 			border-right: 10px solid transparent;
 			border-top: 10px solid #fff;
 		}
+		
+		@keyframes bounce {
+			0%,100%{
+				top:76%;
+	}
+			70%{
+				top:83%}
+			50%{
+				top%:80%;
+			}
+		}
+			
+		
+		#hoverover {
+			position: absolute;
+			top: 0%;
+			animation: 0.8s bounce infinite ease-in;
+			
+		}
+		
+		#entrance:hover +#hoverover{
+			display: none;
+		}
 	</style>
 	<script src="js/d3v3.js"></script>
         <script src="http://d3js.org/d3.v4.min.js"></script>
@@ -869,7 +892,7 @@
 			<button id="btn" onclick="zan()" style="position: absolute;top: 80%;right: 5%;display: none">zan<img src="" alt=""></button><span id="zan" style="position: absolute;top: 80%;right: 8%"></span>
 			
 			<div id="entrance" style="float: left;width: 10%;height: 15%;position: absolute;bottom: 20%;left: 8%;">
-				<img src="069bd5136cf7a25dcc3c4fde2fde6358.png" width="100%" height="100%" style="margin-top: 10;">
+				<img id="cam" src="069bd5136cf7a25dcc3c4fde2fde6358.png" width="100%" height="100%" style="margin-top: 10;">
 				
 				<div id="tooltip" >
   					<p>Click GALLERY to play or close the gallery.</p>
@@ -877,7 +900,7 @@
   					<div id="arrow"></div>
   				</div>
 			</div>
-			<div style="position: absolute; bottom: 13%;left: 8%">
+			<div   id="hoverover" style="position: absolute; bottom: 13%;left: 8%">
 					<h1 style="font-family: cursive; font-size: 1.9vw;color:beige">Hover over me</h1>
 				</div>
 		 	<img src="2073127168.jpg" width="100%" height="100%" >
@@ -910,7 +933,7 @@
 				<h1 style="font-family: sans-serif; font-size: 2.5vw; color:#602030; text-decoration: underline">BUT ALSO A LIFE RECORDER</h1>
 				</div>
 				<div style="position: absolute; top: 30%;left: 0%;width: 100%;height: 70%;">
-					<p style="font-family: sans-serif; font-size: 1.55vw;; color:#00477D; text-overflow: scroll ">My name is Weihua Huang. I was born and raised in China.The art of photography is part of my life. As an amateur photographer, I lay my footprints on many fabulous places with beautiful scenery, astonishing landscapes, charming people, and inspiring activities. Currently, I am member of Global Photographic Union, Royal Photographic Society, and Photographic Society of America (China). Since April 2016, I have been actively participating 30+ international shows and contests for photography and received nominations for 160+ of my artefacts. Multiple photographs of mine were granted gold and silver medals, prizes from the nominating committee, and honor belt awards. It is my dream to see, record, read, and understand the unknown Chinese lands and cultures through my lenses, and to open an exhibition of my work under the theme of “A Different China”.</p>
+					<p style="font-family: sans-serif; font-size: 1.55vw;; color:#00477D; text-overflow: scroll ">My name is Weihua Huang. I was born and raised in China.The art of photography is part of my life. As an amateur photographer, I lay my footprints on many fabulous places with beautiful scenery, astonishing landscapes, charming people, and inspiring culture. Currently, I am member of Global Photographic Union, Royal Photographic Society, and Photographic Society of America (China). Since April 2016, I have been actively participating 30+ international shows and contests for photography and received nominations for 160+ of my artefacts. Multiple photographs of mine were granted gold and silver medals, prizes from the nominating committee, and honor belt awards. It is my dream to see, record, read, and understand the unknown Chinese lands and cultures through my lenses, and to open an exhibition of my work under the theme of “A Different China”.</p>
 				<p style="font-family: sans-serif; font-size: 1.55vw;; color:#00477D"> </p>
 				</div>
 				
@@ -1022,7 +1045,7 @@
 			<div id="awd1">
 				<h1 style="font-family: sans-serif; font-size: 2.3vw; color:#804050;position: absolute;top: 0%;left:17%;"> 2016 CHINESE ART GOLDEN HORSE AWARD</h1>
 				<h2 style="font-family: sans-serif; font-size: 2vw; color:#526394;position: absolute;top: 15%;left:17%;">First time to be the candidate of this award</h2>
-				<div style="position: absolute; top: 29%;left: 17%; width: 80%;height: 50%;">
+				<div style="position: absolute; top: 29%;left: 17%; width: 80%;height: 50%">
 				<p style="font-family: sans-serif; font-size: 1.5vw; color:#526394;">The Golden Horse Award of Chinese Art is to honor the artists who have made outstanding achievements in the field of Chinese art. The winners must first win the highest prize in the authoritative art activities and competitions at home and abroad before they have the basic qualifications to apply for the Golden Horse Award of Chinese Art. I was honored to be one of a hundrend candidates of this award. This was my very first time to get involed in a grand competition with many prominent photographers.</p>
 				</div>
 				<img src="IMG_9685.JPG" id="awd1img"/>
@@ -1040,15 +1063,22 @@
 			</div>
 			<div id="awd3">
 				<h1 style="font-family: sans-serif; font-size: 2.3vw; color:#804050;font-family: sans-serif">Award-Winning Overview</h1>
-				<div style="position: absolute;top:22%;left: 0%;width: :90%;height: 90%;line-height: 1vw;line-height: 1.6vw;white-space: pre-line;">
+				<div style="position: absolute;top:12%;left: 0%;width:90%;height: 90%;line-height: 1.6vw;white-space: pre-line;">
 				<p style="font-family: sans-serif; font-size: 1.2vw; color:#526394">2016 International Exhibition of Armenia's “Travel Around the World” Color Open Group of the APNA Gold Medal&#10;2016 Slovenian “Impression Pannonia” International Photography Exhibition Color Digital Open Group FIAP Gold Medal&#10;2016 Egypt "Decisive Instant" Photo Contest Digital Open Group IUP Award&#10;2017 Moldova International Photography Exhibition Tour Photography Group Salon Special Medal&#10;2017 Bulgarian Photo Contest Color Open Group PSA Award&#10;2017 American Photography Association Digital Open International Photography Exhibition Black and White Open Group PSA Silver and Color Open Group PSA Awards&#10;2017 Singapore Lion City International Photography Salon Tour Black and White Digital Open Group IUP Silver&#10;2018 German DVF three-way tour international photography exhibition black and white open group award</p>
+				<p style="font-family: sans-serif; font-size: 1.2vw; color:#526394"></p>
+				<p style="font-family: sans-serif; font-size: 1.2vw; color:#526394"></p>
+				<p style="font-family: sans-serif; font-size: 1.2vw; color:#526394"></p>
+				<p style="font-family: sans-serif; font-size: 1.2vw; color:#526394"></p>
+				<p style="font-family: sans-serif; font-size: 1.2vw; color:#526394"></p>
+				<p style="font-family: sans-serif; font-size: 1.2vw; color:#526394"></p>
+				<p style="font-family: sans-serif; font-size: 1.2vw; color:#526394"></p>
 				</div>
 			</div>
 		</div>
 		
 		<div id="contact">
 			<div id="contactTxt" style="position: absolute;top: 6%;left: 30%;width: 15%;height: 55%;">
-				<h1 style="position: absolute;top:0%;left: 10%;font-family: sans-serif;font-size: 4.8vw;color:#00477D;border: 1px solid #00477D;box-shadow: 3px 3px 5px #111;">We're All Friends</h1>
+				<h1 style="position: absolute;top:0%;left: 10%;font-family: sans-serif;font-size: 4.8vw;color:#00477D;border: 1px solid #00477D">We're All Friends</h1>
 			</div>
 			<div id="info" style="width: 30%;height: 55%; position: absolute;top: 9%;left:50%;">
 				<h1 id="add" style="position: absolute;top:5%;left: 5%;font-family: sans-serif;font-size: 1.9vw;color:#00477D;">6 Wuding Road, Chengdu, Sichuan, China 610031</h1>
