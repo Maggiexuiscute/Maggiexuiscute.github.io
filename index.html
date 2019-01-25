@@ -7,6 +7,7 @@
 		<meta name="apple-touch-fullscreen" content="YES">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<link type="text/css" rel="stylesheet" href="test.css" />
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
         
     </head>
 	<style>
@@ -329,7 +330,6 @@
 			width:100%;
 			height: 70%;
 			background-color:darkslategrey;
-			margin:30px; 
 			position:absolute; 
 			top:20%;
 			left: 0%; 
@@ -542,17 +542,17 @@
 		
 		#tooltip p { 
 			font-family: sans-serif;
-             font-size:14px;
+             font-size:1.3vw;
   			font-weight:300;
 			color: #804050;
 			}
 
-		#tooltip { width:120px;
-           padding:10px;
-           border-radius:5px;
+		#tooltip { width:100%;
+           padding:1vw;
+           border-radius:0.5vw;
         	position: absolute;
-           box-shadow:2px 2px 10px 0 #ccc;
-           margin: -950px 0 0 -20px;
+           box-shadow:3px 3px 5px 0 #ccc;
+           margin: -150vw 0 0 -1.5vw;
            background:#fff;
            -webkit-transition:margin .5s ease-in-out;
           -moz-transition:margin .5s ease-in-out;}
@@ -562,13 +562,13 @@
 		}
 
 		#entrance:hover #tooltip {
-           margin:-145px 0 0 -20px;
+           margin:-25vw 0 0 -1.5vw;
            -webkit-transition: margin .15s ease-in-out;
   			-moz-transition: margin .15s ease-in-out;}
 
 		#arrow {
   			position:absolute;
-  			margin:10px 0 0 50px;
+  			margin:1vw 0 0 3vw;
 			width: 0; 
 			height: 0; 
 			border-left: 10px solid transparent;
@@ -610,9 +610,7 @@
 			
 		}
 		
-		#entrance:hover +#point{
-			display: none;
-		}
+	
 	</style>
 	<script src="js/d3v3.js"></script>
         <script src="http://d3js.org/d3.v4.min.js"></script>
@@ -881,10 +879,20 @@
 				document.getElementById("email").style.color = "#00477D";
 			}
 		}
+		
+		function closetxt(){
+			var t = document.getElementById("point");
+			t.style.display='none';
+		}
 		</script>
 	
     <body>
-	
+		<div class="file-star" style="position: absolute;bottom: 10%;right: 5%" onclick="addStar({$f[id]})">
+    		<a href="javascript:void(0)">
+        <span id="star{$f[id]}" class="glyphicon glyphicon-star-empty"> {$f[star]}</span>
+    		</a>
+		</div>
+
         <div id="transbox">
 			<img src="IMG_2766.PNG" width="16%" height="107%" style="position: absolute;top: 5%; left: 2%;">
 			<input type="button" value="走马灯" id="gallery" onclick='dogallery()' onmousemove="docolor(this)" onmouseout="doNorm(this)">
@@ -914,12 +922,12 @@
 		<div id="back">
 			<button id="btn" onclick="zan()" style="position: absolute;top: 80%;right: 5%;display: none">zan<img src="" alt=""></button><span id="zan" style="position: absolute;top: 80%;right: 8%"></span>
 			
-			<div id="entrance" style="float: left;width: 10%;height: 15%;position: absolute;bottom: 10%;left: 8%;">
+			<div id="entrance" style="float: left;width: 10%;height: 15%;position: absolute;bottom: 10%;left: 8%;" onmousemove="closetxt()">
 				<img src="069bd5136cf7a25dcc3c4fde2fde6358.png" width="100%" height="100%" style="margin-top: 10;">
 				
 				<div id="tooltip" >
-  					<p>点击“走马灯”可以播放或关闭照片播放</p>
-					<p>点击“我的故事”可以了解我经历的故事</p>
+  					<p>点击<b>“走马灯”</b>可以播放或关闭照片播放</p>
+					<p>点击<b>“我的故事”</b>可以了解我经历的故事</p>
   					<div id="arrow"></div>
   				</div>
 			</div>
